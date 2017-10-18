@@ -1,0 +1,1783 @@
+{
+	"id": "ce128dc6-0c3c-4df8-9836-a9fd56aea084",
+	"name": "Boats and Slips",
+	"allTests": [],
+	"timestamp": "2017-05-08T02:30:09.596Z",
+	"collection_id": "ac76f7f1-fbe5-d755-aac1-722b352b229a",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "b3a39065-120f-158d-0a2a-a69aa6ee50a2",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "ac76f7f1-fbe5-d755-aac1-722b352b229a",
+		"name": "Boats and Slips",
+		"description": "",
+		"order": [
+			"e06164b9-8d83-21b3-9044-04f679f5d3c0",
+			"30cd2e32-bf82-44b1-225b-8cbac24d4efc",
+			"532765d5-c97e-544e-151c-05490f8f5c37",
+			"1e7d6bac-8720-8dce-9eed-fce6163250d5",
+			"43d55c3d-c361-4ba3-1177-92e11d7b59a9",
+			"7455f7ac-bd19-8689-eb12-ceb2ebce12a2",
+			"241ede08-25cc-e9c4-288d-3ea06f01502c",
+			"fd321a74-9fbd-3c7f-e9ef-a02d782191cd",
+			"3d2593da-24bf-41a5-8a9f-c0113c6aa5e3",
+			"d4e442ba-d248-57b9-2b34-33b70dc03293",
+			"49ae7ffd-395f-d6a0-7caa-eab8df45ae00",
+			"98e3dc05-7049-e315-06a5-5b1a55489e7b",
+			"48c9c986-692c-bfea-4af1-72d20d2ca5bc",
+			"c7d0d055-ebe7-2624-4ac2-7231a8ab6234",
+			"1cfa2121-8ad8-cf39-c0fb-bc11215b7296",
+			"babad156-e29a-7f75-bbc0-a722bf1b1083",
+			"8ca85c50-c52f-e3be-b34a-44d302008bac",
+			"de3d9ed6-da39-1fb9-bc87-388e25151c3e",
+			"4970dcec-dc87-d250-2b80-c6deadfe132e",
+			"18206f1d-80e3-1b38-4c33-9294f439a1c9",
+			"fe0e1332-2366-cd6b-4786-27f7fc235141",
+			"19012901-170d-71c2-88a2-7a4628911182",
+			"93f72d5a-7d2a-b392-a720-72b732073313",
+			"48fb0034-b790-dd49-73f9-6f0ea2ea8d50",
+			"8a7ad6df-bc0b-4183-41b7-d5de8108299f",
+			"2dd85e6c-325a-9339-6a3a-ad39bdd01f45",
+			"9d3a2bc9-1ed0-8f93-a802-1dce53165dbd",
+			"5a98b841-1080-4c85-b475-59ff0204bfe3",
+			"c6f50b9e-0045-8fa4-8d30-2ffe152b3dd3",
+			"6f94fd27-645c-21a4-9059-8d3fc4bdb4d7",
+			"badcc1cb-eb02-05af-b415-8364f7844851"
+		],
+		"folders": [],
+		"timestamp": 1493617593515,
+		"synced": false,
+		"remote_id": "0",
+		"owner": "1889483",
+		"sharedWithTeam": false,
+		"subscribed": false,
+		"remoteLink": null,
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"createdAt": "2017-05-01T05:46:44.000Z",
+		"updatedAt": 1494208292159,
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {}
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "boatid",
+			"value": "ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgICgmZAJDA",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "slipid",
+			"value": "ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgkp8JDA",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "slip_arrival_date",
+			"value": "04/30/1990",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "slip_departed_boat",
+			"value": null,
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "slip_current_boat",
+			"value": "PUT_boat",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "boat_name",
+			"value": "boat_patched",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "boat_type",
+			"value": "Yacht",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "boat_length",
+			"value": 150,
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "slip_number",
+			"value": 103,
+			"enabled": true,
+			"type": "text"
+		}
+	],
+	"results": [
+		{
+			"name": "Boat - POST 1/1",
+			"id": "e06164b9-8d83-21b3-9044-04f679f5d3c0",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test Boat - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test Boat - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"1152"
+			],
+			"allTests": [
+				{
+					"Test Boat - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "1152",
+			"totalRequestTime": "1152",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - GET 1/1",
+			"id": "30cd2e32-bf82-44b1-225b-8cbac24d4efc",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/2 - Boat - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+				"Test 2/2 - Boat - GET : Check that the ID of our POST req matches the ID returned. Boat ID = ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA": true
+			},
+			"testPassFailCounts": {
+				"Test 1/2 - Boat - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 2/2 - Boat - GET : Check that the ID of our POST req matches the ID returned. Boat ID = ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"314"
+			],
+			"allTests": [
+				{
+					"Test 1/2 - Boat - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+					"Test 2/2 - Boat - GET : Check that the ID of our POST req matches the ID returned. Boat ID = ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA": true
+				}
+			],
+			"time": "314",
+			"totalRequestTime": "314",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - DELETE 1/3",
+			"id": "532765d5-c97e-544e-151c-05490f8f5c37",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/3 - Boat - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": true
+			},
+			"testPassFailCounts": {
+				"Test 1/3 - Boat - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"147"
+			],
+			"allTests": [
+				{
+					"Test 1/3 - Boat - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": true
+				}
+			],
+			"time": "147",
+			"totalRequestTime": "147",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - DELETE 2/3",
+			"id": "1e7d6bac-8720-8dce-9eed-fce6163250d5",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error",
+				"detail": {
+					"name": "Internal Server Error",
+					"detail": "A generic error message, given when no more specific message is suitable."
+				}
+			},
+			"tests": {
+				"Test 2/3 - Boat - DELETE  :  Status Code should equal '500 Internal Server Error' because no Boat with that ID is available. Actual Status Code = 500 Internal Server Error": true
+			},
+			"testPassFailCounts": {
+				"Test 2/3 - Boat - DELETE  :  Status Code should equal '500 Internal Server Error' because no Boat with that ID is available. Actual Status Code = 500 Internal Server Error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"1655"
+			],
+			"allTests": [
+				{
+					"Test 2/3 - Boat - DELETE  :  Status Code should equal '500 Internal Server Error' because no Boat with that ID is available. Actual Status Code = 500 Internal Server Error": true
+				}
+			],
+			"time": "1655",
+			"totalRequestTime": "1655",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - DELETE 3/3 (POST new boat)",
+			"id": "43d55c3d-c361-4ba3-1177-92e11d7b59a9",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 3/3 Slip - DELETE  :  ** Not really a test because we are just creatign a new Slip to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 3/3 Slip - DELETE  :  ** Not really a test because we are just creatign a new Slip to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"278"
+			],
+			"allTests": [
+				{
+					"Test 3/3 Slip - DELETE  :  ** Not really a test because we are just creatign a new Slip to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "278",
+			"totalRequestTime": "278",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - PATCH 1/2",
+			"id": "7455f7ac-bd19-8689-eb12-ceb2ebce12a2",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = new_boat *   :  * Boat type = Catamaran *   :  *Boat length = 28 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = new_boat *   :  * Boat type = Catamaran *   :  *Boat length = 28 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"259"
+			],
+			"allTests": [
+				{
+					"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = new_boat *   :  * Boat type = Catamaran *   :  *Boat length = 28 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": true
+				}
+			],
+			"time": "259",
+			"totalRequestTime": "259",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - PATCH 2/2",
+			"id": "241ede08-25cc-e9c4-288d-3ea06f01502c",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 2/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = boat_patched : Does not equal past boat name of - new_boat": true,
+				"Test 3/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = Yacht : Does not equal past boat name of - Catamaran": true,
+				"Test 4/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = 150 : Does not equal past boat name of - 28": true,
+				"Test 5/5 - Boat - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 2/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = boat_patched : Does not equal past boat name of - new_boat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = Yacht : Does not equal past boat name of - Catamaran": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = 150 : Does not equal past boat name of - 28": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 - Boat - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"143"
+			],
+			"allTests": [
+				{
+					"Test 2/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = boat_patched : Does not equal past boat name of - new_boat": true,
+					"Test 3/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = Yacht : Does not equal past boat name of - Catamaran": true,
+					"Test 4/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = 150 : Does not equal past boat name of - 28": true,
+					"Test 5/5 - Boat - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": true
+				}
+			],
+			"time": "143",
+			"totalRequestTime": "143",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - PUT 1/2",
+			"id": "fd321a74-9fbd-3c7f-e9ef-a02d782191cd",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = boat_patched *   :  * Boat type = Yacht *   :  *Boat length = 150 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = boat_patched *   :  * Boat type = Yacht *   :  *Boat length = 150 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"142"
+			],
+			"allTests": [
+				{
+					"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = boat_patched *   :  * Boat type = Yacht *   :  *Boat length = 150 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": true
+				}
+			],
+			"time": "142",
+			"totalRequestTime": "142",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - PUT 2/2",
+			"id": "3d2593da-24bf-41a5-8a9f-c0113c6aa5e3",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 2/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = null : Does not equal past boat name of - boat_patched": true,
+				"Test 3/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = null : Does not equal past boat name of - Yacht": true,
+				"Test 4/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = null : Does not equal past boat name of - 150": true,
+				"Test 5/5 - Boat - PUT. Check that status code returned '200 OK'   :  Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 2/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = null : Does not equal past boat name of - boat_patched": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = null : Does not equal past boat name of - Yacht": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = null : Does not equal past boat name of - 150": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 - Boat - PUT. Check that status code returned '200 OK'   :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"136"
+			],
+			"allTests": [
+				{
+					"Test 2/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = null : Does not equal past boat name of - boat_patched": true,
+					"Test 3/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = null : Does not equal past boat name of - Yacht": true,
+					"Test 4/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = null : Does not equal past boat name of - 150": true,
+					"Test 5/5 - Boat - PUT. Check that status code returned '200 OK'   :  Status Code = 200 OK": true
+				}
+			],
+			"time": "136",
+			"totalRequestTime": "136",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - Return All Boats 1/4",
+			"id": "d4e442ba-d248-57b9-2b34-33b70dc03293",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 1/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"226"
+			],
+			"allTests": [
+				{
+					"Test 1/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "226",
+			"totalRequestTime": "226",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - Return All Boats 2/4",
+			"id": "49ae7ffd-395f-d6a0-7caa-eab8df45ae00",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 2/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 2/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"197"
+			],
+			"allTests": [
+				{
+					"Test 2/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "197",
+			"totalRequestTime": "197",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - Return All Boats 3/4",
+			"id": "98e3dc05-7049-e315-06a5-5b1a55489e7b",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 3/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 3/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"198"
+			],
+			"allTests": [
+				{
+					"Test 3/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "198",
+			"totalRequestTime": "198",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat - Return All Boats 4/4",
+			"id": "48c9c986-692c-bfea-4af1-72d20d2ca5bc",
+			"url": "https://boatsnslips.appspot.com/allboats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 4/5 Boat - Return All Boats  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+				"Test 5/5 Boat - Return All Boats  : Body length should be at least >= 4 because of the boats we made. Actual Body length = 4": true
+			},
+			"testPassFailCounts": {
+				"Test 4/5 Boat - Return All Boats  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 Boat - Return All Boats  : Body length should be at least >= 4 because of the boats we made. Actual Body length = 4": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"167"
+			],
+			"allTests": [
+				{
+					"Test 4/5 Boat - Return All Boats  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+					"Test 5/5 Boat - Return All Boats  : Body length should be at least >= 4 because of the boats we made. Actual Body length = 4": true
+				}
+			],
+			"time": "167",
+			"totalRequestTime": "167",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - POST 1/1",
+			"id": "c7d0d055-ebe7-2624-4ac2-7231a8ab6234",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/1 Slip - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 1/1 Slip - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"192"
+			],
+			"allTests": [
+				{
+					"Test 1/1 Slip - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "192",
+			"totalRequestTime": "192",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - GET 1/1",
+			"id": "1cfa2121-8ad8-cf39-c0fb-bc11215b7296",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/2 - Slip - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+				"Test 2/2 - Slip - GET : Check that the ID of our POST req matches the ID returned. Slip ID = ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA": true
+			},
+			"testPassFailCounts": {
+				"Test 1/2 - Slip - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 2/2 - Slip - GET : Check that the ID of our POST req matches the ID returned. Slip ID = ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"180"
+			],
+			"allTests": [
+				{
+					"Test 1/2 - Slip - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+					"Test 2/2 - Slip - GET : Check that the ID of our POST req matches the ID returned. Slip ID = ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA": true
+				}
+			],
+			"time": "180",
+			"totalRequestTime": "180",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - DELETE 1/3",
+			"id": "babad156-e29a-7f75-bbc0-a722bf1b1083",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/2 - Slip - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": true
+			},
+			"testPassFailCounts": {
+				"Test 1/2 - Slip - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"135"
+			],
+			"allTests": [
+				{
+					"Test 1/2 - Slip - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": true
+				}
+			],
+			"time": "135",
+			"totalRequestTime": "135",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - DELETE 2/3",
+			"id": "8ca85c50-c52f-e3be-b34a-44d302008bac",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error",
+				"detail": {
+					"name": "Internal Server Error",
+					"detail": "A generic error message, given when no more specific message is suitable."
+				}
+			},
+			"tests": {
+				"Test 2/3 - Slip - DELETE  :  Status Code should equal '500 Internal Server Error' because no Slip with that ID is available. Actual Status Code = 500 Internal Server Error": true
+			},
+			"testPassFailCounts": {
+				"Test 2/3 - Slip - DELETE  :  Status Code should equal '500 Internal Server Error' because no Slip with that ID is available. Actual Status Code = 500 Internal Server Error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"196"
+			],
+			"allTests": [
+				{
+					"Test 2/3 - Slip - DELETE  :  Status Code should equal '500 Internal Server Error' because no Slip with that ID is available. Actual Status Code = 500 Internal Server Error": true
+				}
+			],
+			"time": "196",
+			"totalRequestTime": "196",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - DELETE 3/3",
+			"id": "de3d9ed6-da39-1fb9-bc87-388e25151c3e",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 3/3 Boat - DELETE  :  ** Not really a test because we are just creatign a new Boat to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 3/3 Boat - DELETE  :  ** Not really a test because we are just creatign a new Boat to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"278"
+			],
+			"allTests": [
+				{
+					"Test 3/3 Boat - DELETE  :  ** Not really a test because we are just creatign a new Boat to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "278",
+			"totalRequestTime": "278",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - PATCH 1/2",
+			"id": "4970dcec-dc87-d250-2b80-c6deadfe132e",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/6 - Slip - PATCH  :  Return the values from Slip GET request. * Slip number = 1 * Slip current_boat :   = null *   :  *Slip arrival_date = null : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 1/6 - Slip - PATCH  :  Return the values from Slip GET request. * Slip number = 1 * Slip current_boat :   = null *   :  *Slip arrival_date = null : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"125"
+			],
+			"allTests": [
+				{
+					"Test 1/6 - Slip - PATCH  :  Return the values from Slip GET request. * Slip number = 1 * Slip current_boat :   = null *   :  *Slip arrival_date = null : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": true
+				}
+			],
+			"time": "125",
+			"totalRequestTime": "125",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - PATCH 2/2",
+			"id": "18206f1d-80e3-1b38-4c33-9294f439a1c9",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 2/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = 101 : Does not equal past slip number of 1": true,
+				"Test 3/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = PUT_boat : Does not equal past Slip current_boat of null": true,
+				"Test 4/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = 04/30/1990 : Does not equal past Slip arrival_date of null": true,
+				"Test 5/5 - Slip - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 2/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = 101 : Does not equal past slip number of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = PUT_boat : Does not equal past Slip current_boat of null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = 04/30/1990 : Does not equal past Slip arrival_date of null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 - Slip - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"249"
+			],
+			"allTests": [
+				{
+					"Test 2/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = 101 : Does not equal past slip number of 1": true,
+					"Test 3/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = PUT_boat : Does not equal past Slip current_boat of null": true,
+					"Test 4/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = 04/30/1990 : Does not equal past Slip arrival_date of null": true,
+					"Test 5/5 - Slip - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": true
+				}
+			],
+			"time": "249",
+			"totalRequestTime": "249",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - PUT 1/2",
+			"id": "fe0e1332-2366-cd6b-4786-27f7fc235141",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/4 - Slip - PUT  :  Return the values from Slip GET request. * Slip number = 101 * Slip current_boat :   = PUT_boat *   :  *Slip arrival_date = 04/30/1990 : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 1/4 - Slip - PUT  :  Return the values from Slip GET request. * Slip number = 101 * Slip current_boat :   = PUT_boat *   :  *Slip arrival_date = 04/30/1990 : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"135"
+			],
+			"allTests": [
+				{
+					"Test 1/4 - Slip - PUT  :  Return the values from Slip GET request. * Slip number = 101 * Slip current_boat :   = PUT_boat *   :  *Slip arrival_date = 04/30/1990 : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": true
+				}
+			],
+			"time": "135",
+			"totalRequestTime": "135",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - PUT 2/2",
+			"id": "19012901-170d-71c2-88a2-7a4628911182",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error",
+				"detail": {
+					"name": "Internal Server Error",
+					"detail": "A generic error message, given when no more specific message is suitable."
+				}
+			},
+			"tests": {
+				"Test 2/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = undefined : Does not equal past slip number of 101": true,
+				"Test 3/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = undefined : Does not equal past Slip current_boat of PUT_boat": true,
+				"Test 4/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = undefined : Does not equal past Slip arrival_date of 04/30/1990": true
+			},
+			"testPassFailCounts": {
+				"Test 2/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = undefined : Does not equal past slip number of 101": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = undefined : Does not equal past Slip current_boat of PUT_boat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = undefined : Does not equal past Slip arrival_date of 04/30/1990": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"178"
+			],
+			"allTests": [
+				{
+					"Test 2/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = undefined : Does not equal past slip number of 101": true,
+					"Test 3/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = undefined : Does not equal past Slip current_boat of PUT_boat": true,
+					"Test 4/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = undefined : Does not equal past Slip arrival_date of 04/30/1990": true
+				}
+			],
+			"time": "178",
+			"totalRequestTime": "178",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - Return All Slips 1/3",
+			"id": "93f72d5a-7d2a-b392-a720-72b732073313",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"259"
+			],
+			"allTests": [
+				{
+					"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "259",
+			"totalRequestTime": "259",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - Return All Slips 2/3",
+			"id": "48fb0034-b790-dd49-73f9-6f0ea2ea8d50",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+			},
+			"testPassFailCounts": {
+				"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"246"
+			],
+			"allTests": [
+				{
+					"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": true
+				}
+			],
+			"time": "246",
+			"totalRequestTime": "246",
+			"iterationResults": {}
+		},
+		{
+			"name": "Slip - Return All Slips 3/3",
+			"id": "8a7ad6df-bc0b-4183-41b7-d5de8108299f",
+			"url": "https://boatsnslips.appspot.com/allslips",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 2/3 Slip - Return All Slips  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+				"Test 3/3 Slip - Return All Slips  : Body length should be at least >= 3 because of the slips we made. Actual Body length = 3": true
+			},
+			"testPassFailCounts": {
+				"Test 2/3 Slip - Return All Slips  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/3 Slip - Return All Slips  : Body length should be at least >= 3 because of the slips we made. Actual Body length = 3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"116"
+			],
+			"allTests": [
+				{
+					"Test 2/3 Slip - Return All Slips  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": true,
+					"Test 3/3 Slip - Return All Slips  : Body length should be at least >= 3 because of the slips we made. Actual Body length = 3": true
+				}
+			],
+			"time": "116",
+			"totalRequestTime": "116",
+			"iterationResults": {}
+		},
+		{
+			"name": "BoatArrival - PUT 1/3",
+			"id": "2dd85e6c-325a-9339-6a3a-ad39bdd01f45",
+			"url": "https://boatsnslips.appspot.com/allboats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/2 BoatArrival - PUT : Get all the boats back and set the global boatid to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 1/2 BoatArrival - PUT : Get all the boats back and set the global boatid to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"121"
+			],
+			"allTests": [
+				{
+					"Test 1/2 BoatArrival - PUT : Get all the boats back and set the global boatid to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": true
+				}
+			],
+			"time": "121",
+			"totalRequestTime": "121",
+			"iterationResults": {}
+		},
+		{
+			"name": "BoatArrival - PUT 2/3",
+			"id": "9d3a2bc9-1ed0-8f93-a802-1dce53165dbd",
+			"url": "https://boatsnslips.appspot.com/allslips",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1/3 BoatArrival - PUT : Get all the slips back and set the global slip number to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": true
+			},
+			"testPassFailCounts": {
+				"Test 1/3 BoatArrival - PUT : Get all the slips back and set the global slip number to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"116"
+			],
+			"allTests": [
+				{
+					"Test 1/3 BoatArrival - PUT : Get all the slips back and set the global slip number to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": true
+				}
+			],
+			"time": "116",
+			"totalRequestTime": "116",
+			"iterationResults": {}
+		},
+		{
+			"name": "BoatArrival - PUT 3/3",
+			"id": "5a98b841-1080-4c85-b475-59ff0204bfe3",
+			"url": "https://boatsnslips.appspot.com/boatarrival/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgICgmZAJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"361"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "361",
+			"totalRequestTime": "361",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 42,
+	"totalFail": 0,
+	"totalTime": 7901,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Boat - POST 1/1",
+			"id": "e06164b9-8d83-21b3-9044-04f679f5d3c0",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test Boat - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - GET 1/1",
+			"id": "30cd2e32-bf82-44b1-225b-8cbac24d4efc",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/2 - Boat - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 2/2 - Boat - GET : Check that the ID of our POST req matches the ID returned. Boat ID = ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - DELETE 1/3",
+			"id": "532765d5-c97e-544e-151c-05490f8f5c37",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/3 - Boat - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - DELETE 2/3",
+			"id": "1e7d6bac-8720-8dce-9eed-fce6163250d5",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgwZwKDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error",
+				"detail": {
+					"name": "Internal Server Error",
+					"detail": "A generic error message, given when no more specific message is suitable."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/3 - Boat - DELETE  :  Status Code should equal '500 Internal Server Error' because no Boat with that ID is available. Actual Status Code = 500 Internal Server Error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - DELETE 3/3 (POST new boat)",
+			"id": "43d55c3d-c361-4ba3-1177-92e11d7b59a9",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 3/3 Slip - DELETE  :  ** Not really a test because we are just creatign a new Slip to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - PATCH 1/2",
+			"id": "7455f7ac-bd19-8689-eb12-ceb2ebce12a2",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = new_boat *   :  * Boat type = Catamaran *   :  *Boat length = 28 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - PATCH 2/2",
+			"id": "241ede08-25cc-e9c4-288d-3ea06f01502c",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = boat_patched : Does not equal past boat name of - new_boat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = Yacht : Does not equal past boat name of - Catamaran": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = 150 : Does not equal past boat name of - 28": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 - Boat - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - PUT 1/2",
+			"id": "fd321a74-9fbd-3c7f-e9ef-a02d782191cd",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = boat_patched *   :  * Boat type = Yacht *   :  *Boat length = 150 *   :  Status Code should equal '200 OK'. Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - PUT 2/2",
+			"id": "3d2593da-24bf-41a5-8a9f-c0113c6aa5e3",
+			"url": "https://boatsnslips.appspot.com/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgIDgrJQJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = null : Does not equal past boat name of - boat_patched": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = null : Does not equal past boat name of - Yacht": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = null : Does not equal past boat name of - 150": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 - Boat - PUT. Check that status code returned '200 OK'   :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - Return All Boats 1/4",
+			"id": "d4e442ba-d248-57b9-2b34-33b70dc03293",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - Return All Boats 2/4",
+			"id": "49ae7ffd-395f-d6a0-7caa-eab8df45ae00",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - Return All Boats 3/4",
+			"id": "98e3dc05-7049-e315-06a5-5b1a55489e7b",
+			"url": "https://boatsnslips.appspot.com/boat",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 3/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat - Return All Boats 4/4",
+			"id": "48c9c986-692c-bfea-4af1-72d20d2ca5bc",
+			"url": "https://boatsnslips.appspot.com/allboats",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 4/5 Boat - Return All Boats  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 Boat - Return All Boats  : Body length should be at least >= 4 because of the boats we made. Actual Body length = 4": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - POST 1/1",
+			"id": "c7d0d055-ebe7-2624-4ac2-7231a8ab6234",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/1 Slip - POST  :  Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - GET 1/1",
+			"id": "1cfa2121-8ad8-cf39-c0fb-bc11215b7296",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/2 - Slip - GET  :  Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 2/2 - Slip - GET : Check that the ID of our POST req matches the ID returned. Slip ID = ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - DELETE 1/3",
+			"id": "babad156-e29a-7f75-bbc0-a722bf1b1083",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/2 - Slip - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - DELETE 2/3",
+			"id": "8ca85c50-c52f-e3be-b34a-44d302008bac",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICgmZAJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error",
+				"detail": {
+					"name": "Internal Server Error",
+					"detail": "A generic error message, given when no more specific message is suitable."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/3 - Slip - DELETE  :  Status Code should equal '500 Internal Server Error' because no Slip with that ID is available. Actual Status Code = 500 Internal Server Error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - DELETE 3/3",
+			"id": "de3d9ed6-da39-1fb9-bc87-388e25151c3e",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 3/3 Boat - DELETE  :  ** Not really a test because we are just creatign a new Boat to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - PATCH 1/2",
+			"id": "4970dcec-dc87-d250-2b80-c6deadfe132e",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/6 - Slip - PATCH  :  Return the values from Slip GET request. * Slip number = 1 * Slip current_boat :   = null *   :  *Slip arrival_date = null : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - PATCH 2/2",
+			"id": "18206f1d-80e3-1b38-4c33-9294f439a1c9",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = 101 : Does not equal past slip number of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = PUT_boat : Does not equal past Slip current_boat of null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = 04/30/1990 : Does not equal past Slip arrival_date of null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5/5 - Slip - PATCH. Check that status code returned '200 OK'   :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - PUT 1/2",
+			"id": "fe0e1332-2366-cd6b-4786-27f7fc235141",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/4 - Slip - PUT  :  Return the values from Slip GET request. * Slip number = 101 * Slip current_boat :   = PUT_boat *   :  *Slip arrival_date = 04/30/1990 : *  :   Status Code should equal '200 OK'.  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - PUT 2/2",
+			"id": "19012901-170d-71c2-88a2-7a4628911182",
+			"url": "https://boatsnslips.appspot.com/slip/ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgIDg2o0KDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error",
+				"detail": {
+					"name": "Internal Server Error",
+					"detail": "A generic error message, given when no more specific message is suitable."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = undefined : Does not equal past slip number of 101": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = undefined : Does not equal past Slip current_boat of PUT_boat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = undefined : Does not equal past Slip arrival_date of 04/30/1990": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - Return All Slips 1/3",
+			"id": "93f72d5a-7d2a-b392-a720-72b732073313",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - Return All Slips 2/3",
+			"id": "48fb0034-b790-dd49-73f9-6f0ea2ea8d50",
+			"url": "https://boatsnslips.appspot.com/slip",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = 201 Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Slip - Return All Slips 3/3",
+			"id": "8a7ad6df-bc0b-4183-41b7-d5de8108299f",
+			"url": "https://boatsnslips.appspot.com/allslips",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 2/3 Slip - Return All Slips  : Status Code should equal '200 OK'. Actual Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3/3 Slip - Return All Slips  : Body length should be at least >= 3 because of the slips we made. Actual Body length = 3": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "BoatArrival - PUT 1/3",
+			"id": "2dd85e6c-325a-9339-6a3a-ad39bdd01f45",
+			"url": "https://boatsnslips.appspot.com/allboats",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/2 BoatArrival - PUT : Get all the boats back and set the global boatid to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "BoatArrival - PUT 2/3",
+			"id": "9d3a2bc9-1ed0-8f93-a802-1dce53165dbd",
+			"url": "https://boatsnslips.appspot.com/allslips",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1/3 BoatArrival - PUT : Get all the slips back and set the global slip number to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "BoatArrival - PUT 3/3",
+			"id": "5a98b841-1080-4c85-b475-59ff0204bfe3",
+			"url": "https://boatsnslips.appspot.com/boatarrival/boat/ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgICgmZAJDA",
+			"time": "2017-05-08T02:30:09.596Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}

@@ -1,0 +1,81 @@
+{
+  "id": "8d4fd9ea-7cf2-7b68-1857-fccf944f8e30",
+  "name": "Postman Globals",
+  "values": [
+    {
+      "enabled": true,
+      "key": "NumberGistsPre",
+      "type": "text",
+      "value": "0"
+    },
+    {
+      "enabled": true,
+      "key": "NumberGistsPost",
+      "type": "text",
+      "value": "1"
+    },
+    {
+      "enabled": true,
+      "key": "GistId",
+      "type": "text",
+      "value": "6d023441d36828e338754a2b5f8d4392"
+    },
+    {
+      "enabled": true,
+      "key": "boatid",
+      "type": "text",
+      "value": "ag1zfmJvYXRzbnNsaXBzciYLEgRCb2F0IgtwYXJlbnRfYm9hdAwLEgRCb2F0GICAgICArtkIDA"
+    },
+    {
+      "enabled": true,
+      "key": "slipid",
+      "type": "text",
+      "value": "ag1zfmJvYXRzbnNsaXBzciYLEgRTbGlwIgtwYXJlbnRfc2xpcAwLEgRTbGlwGICAgICAw5ULDA"
+    },
+    {
+      "enabled": true,
+      "key": "slip_arrival_date",
+      "type": "text",
+      "value": "04/30/1990"
+    },
+    {
+      "enabled": true,
+      "key": "slip_departed_boat",
+      "type": "text",
+      "value": null
+    },
+    {
+      "enabled": true,
+      "key": "slip_current_boat",
+      "type": "text",
+      "value": "PUT_boat"
+    },
+    {
+      "enabled": true,
+      "key": "boat_name",
+      "type": "text",
+      "value": "boat_patched"
+    },
+    {
+      "enabled": true,
+      "key": "boat_type",
+      "type": "text",
+      "value": "Yacht"
+    },
+    {
+      "enabled": true,
+      "key": "boat_length",
+      "type": "text",
+      "value": 150
+    },
+    {
+      "enabled": true,
+      "key": "slip_number",
+      "type": "text",
+      "value": 103
+    }
+  ],
+  "_postman_variable_scope": "globals",
+  "_postman_exported_at": "2017-05-08T02:29:29.351Z",
+  "_postman_exported_using": "Postman/4.10.7"
+}

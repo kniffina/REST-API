@@ -1,0 +1,937 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Boats and Slips",
+		"_postman_id": "ac76f7f1-fbe5-d755-aac1-722b352b229a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Boat - POST 1/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"globals.boatid = body.id; //set global boatid var to the id created",
+							"",
+							"",
+							"tests[\"Test Boat - POST  :  Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"boat_1\",\n  \"type\": \"Catamaran\",\n  \"length\": 28\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - GET 1/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test 1/2 - Boat - GET  :  Status Code should equal '200 OK'. Actual Status Code = \" + statusCode] = statusCode === \"200 OK\";",
+							"",
+							"tests[\"Test 2/2 - Boat - GET : Check that the ID of our POST req matches the ID returned. Boat ID = \" + body.id] = body.id === globals.boatid;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat/{{boatid}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - DELETE 1/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"",
+							"",
+							"tests[\"Test 1/3 - Boat - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = \" + statusCode] = statusCode === \"204 No Content\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat/{{boatid}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - DELETE 2/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"",
+							"tests[\"Test 2/3 - Boat - DELETE  :  Status Code should equal '500 Internal Server Error' because no Boat with that ID is available. Actual Status Code = \" + statusCode] = statusCode === \"500 Internal Server Error\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat/{{boatid}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - DELETE 3/3 (POST new boat)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"globals.boatid = body.id; //set global boatid var to the id created",
+							"",
+							"tests[\"Test 3/3 Slip - DELETE  :  ** Not really a test because we are just creatign a new Slip to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"new_boat\",\n  \"type\": \"Catamaran\",\n  \"length\": 28\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - PATCH 1/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"globals.boat_name = body.name;",
+							"globals.boat_type = body.type;",
+							"globals.boat_length = body.length;",
+							"",
+							"tests[\"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = \" + globals.boat_name + \" *   :  * Boat type = \" + globals.boat_type + \" *   :  *Boat length = \" + globals.boat_length + \" *   :  Status Code should equal '200 OK'. Status Code = \" + statusCode] = statusCode === \"200 OK\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat/{{boatid}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - PATCH 2/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test 2/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = \" + body.name + \" : Does not equal past boat name of - \" + globals.boat_name] = body.name != globals.boat_name;",
+							"",
+							"tests[\"Test 3/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = \" + body.type + \" : Does not equal past boat name of - \" + globals.boat_type] = body.type != globals.boat_type;",
+							"",
+							"tests[\"Test 4/5 - Boat - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = \" + body.length + \" : Does not equal past boat name of - \" + globals.boat_length] = body.length != globals.boat_length;",
+							"",
+							"tests[\"Test 5/5 - Boat - PATCH. Check that status code returned '200 OK'   :  Status Code = \" + statusCode] = statusCode == \"200 OK\";",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat/{{boatid}}",
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"boat_patched\",\n  \"type\": \"Yacht\",\n  \"length\": 150\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - PUT 1/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"globals.boat_name = body.name;",
+							"globals.boat_type = body.type;",
+							"globals.boat_length = body.length;",
+							"",
+							"tests[\"Test 1/3 - Boat - PATCH  :  Return the values from Boat GET request. * Boat name = \" + globals.boat_name + \" *   :  * Boat type = \" + globals.boat_type + \" *   :  *Boat length = \" + globals.boat_length + \" *   :  Status Code should equal '200 OK'. Status Code = \" + statusCode] = statusCode === \"200 OK\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat/{{boatid}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - PUT 2/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test 2/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Name* on req = \" + body.name + \" : Does not equal past boat name of - \" + globals.boat_name] = body.name != globals.boat_name;",
+							"",
+							"tests[\"Test 3/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Type* on req = \" + body.type + \" : Does not equal past boat name of - \" + globals.boat_type] = body.type != globals.boat_type;",
+							"",
+							"tests[\"Test 4/5 - Boat - PUT.  Response body variables should be different than the global variables we specified in the last get request. Boat *Length* on req = \" + body.length + \" : Does not equal past boat name of - \" + globals.boat_length] = body.length != globals.boat_length;",
+							"",
+							"tests[\"Test 5/5 - Boat - PUT. Check that status code returned '200 OK'   :  Status Code = \" + statusCode] = statusCode == \"200 OK\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat/{{boatid}}",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - Return All Boats 1/4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"",
+							"tests[\"Test 1/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"The Great Yonder\",\n  \"type\": \"Fishing Boat\",\n  \"length\": 62\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - Return All Boats 2/4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"",
+							"tests[\"Test 2/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Angel Hair\",\n  \"type\": \"Yacht\",\n  \"length\": 250\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - Return All Boats 3/4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"",
+							"tests[\"Test 3/5 Boat - Return All Boats  : *Creating more instances of Boats before returning them all *   Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boat",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Gilligan's Escape Raft\",\n  \"type\": \"Raft\",\n  \"length\": 10\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat - Return All Boats 4/4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test 4/5 Boat - Return All Boats  : Status Code should equal '200 OK'. Actual Status Code = \" + statusCode] = statusCode === \"200 OK\";",
+							"",
+							"tests[\"Test 5/5 Boat - Return All Boats  : Body length should be at least >= 4 because of the boats we made. Actual Body length = \" + body.length] = body.length >= 4;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/allboats",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - POST 1/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"globals.slipid = body.id; //set global boatid var to the id created",
+							"",
+							"tests[\"Test 1/1 Slip - POST  :  Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"number\": 1,\r\n  \"current_boat\":\"gilligans island\",\r\n  \"arrival_date\": \"12/12/2017\",\r\n  \"departure_history\":[{\"departure_date\": \"04/02/2017\"}, {\"departed_boat\": \"\"}] \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - GET 1/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test 1/2 - Slip - GET  :  Status Code should equal '200 OK'. Actual Status Code = \" + statusCode] = statusCode === \"200 OK\";",
+							"",
+							"tests[\"Test 2/2 - Slip - GET : Check that the ID of our POST req matches the ID returned. Slip ID = \" + body.id] = body.id === globals.slipid;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip/{{slipid}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - DELETE 1/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"",
+							"tests[\"Test 1/2 - Slip - DELETE  :  Status Code should equal '204 No Content'. Actual Status Code = \" + statusCode] = statusCode === \"204 No Content\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip/{{slipid}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - DELETE 2/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"",
+							"tests[\"Test 2/3 - Slip - DELETE  :  Status Code should equal '500 Internal Server Error' because no Slip with that ID is available. Actual Status Code = \" + statusCode] = statusCode === \"500 Internal Server Error\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip/{{slipid}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - DELETE 3/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"globals.slipid = body.id; //set global slipid var to the id created",
+							"",
+							"tests[\"Test 3/3 Boat - DELETE  :  ** Not really a test because we are just creatign a new Boat to be used in further tests (since we deleted our old one) ** Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"number\": 2,\r\n  \"current_boat\":\"\",\r\n  \"arrival_date\": \"04/1/2017\",\r\n  \"departure_history\":[{\"departure_date\": \"\"}, {\"departed_boat\": \"\"}] \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - PATCH 1/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"globals.slip_number = body.number;",
+							"globals.slip_current_boat = body.current_boat;",
+							"globals.slip_arrival_date = body.arrival_date;",
+							"",
+							"",
+							"tests[\"Test 1/6 - Slip - PATCH  :  Return the values from Slip GET request. * Slip number = \" + globals.slip_number + \" * Slip current_boat :   = \" +  globals.slip_current_boat + \" *   :  *Slip arrival_date = \" + globals.slip_arrival_date +  \" : *  :   Status Code should equal '200 OK'.  Status Code = \" + statusCode] = statusCode === \"200 OK\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip/{{slipid}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - PATCH 2/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test 2/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = \" + body.number + \" : Does not equal past slip number of \" + globals.slip_number] = body.number != globals.slip_number;",
+							"",
+							"tests[\"Test 3/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = \" + body.current_boat + \" : Does not equal past Slip current_boat of \" + globals.slip_current_boat] = body.current_boat != globals.slip_current_boat;",
+							"",
+							"tests[\"Test 4/5 - Slip - PATCH.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = \" + body.arrival_date + \" : Does not equal past Slip arrival_date of \" + globals.slip_arrival_date] = body.arrival_date != globals.slip_arrival_date;",
+							"",
+							"tests[\"Test 5/5 - Slip - PATCH. Check that status code returned '200 OK'   :  Status Code = \" + statusCode] = statusCode == \"200 OK\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip/{{slipid}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"number\": 101,\r\n  \"current_boat\":\"PUT_boat\",\r\n  \"arrival_date\": \"04/30/1990\",\r\n  \"departure_history\":[\r\n\t{\"departure_date\": \"\"}, \r\n\t{\"departed_boat\": \"\"}\r\n  ] \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - PUT 1/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"globals.slip_number = body.number;",
+							"globals.slip_current_boat = body.current_boat;",
+							"globals.slip_arrival_date = body.arrival_date;",
+							"",
+							"",
+							"tests[\"Test 1/4 - Slip - PUT  :  Return the values from Slip GET request. * Slip number = \" + globals.slip_number + \" * Slip current_boat :   = \" +  globals.slip_current_boat + \" *   :  *Slip arrival_date = \" + globals.slip_arrival_date +  \" : *  :   Status Code should equal '200 OK'.  Status Code = \" + statusCode] = statusCode === \"200 OK\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip/{{slipid}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - PUT 2/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"if(responseBody === \"A server error took place! URL not found.\") {",
+							"    body = 0;",
+							"}",
+							"",
+							"else ",
+							"    body = json.parse(responseBody);",
+							"",
+							"tests[\"Test 2/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Number* on req = \" + body.number + \" : Does not equal past slip number of \" + globals.slip_number] = body.number != globals.slip_number;",
+							"",
+							"tests[\"Test 3/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Current Boat* on req = \" + body.current_boat + \" : Does not equal past Slip current_boat of \" + globals.slip_current_boat] = body.current_boat != globals.slip_current_boat;",
+							"",
+							"tests[\"Test 4/4 - Slip - PUT.  Response body variables should be different than the global variables we specified in the last get request. Slip *Arrival Date* on req = \" + body.arrival_date + \" : Does not equal past Slip arrival_date of \" + globals.slip_arrival_date] = body.arrival_date != globals.slip_arrival_date;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip/{{slipid}}",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"number\": 99,\r\n  \"current_boat\":\"PUT request boat\",\r\n  \"arrival_date\": \"03/23/1990\",\r\n  \"departure_history\":[\r\n\t{\"departure_date\": \"\"}, \r\n\t{\"departed_boat\": \"\"}\r\n  ] \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - Return All Slips 1/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"globals.slipid = body.id; //set global boatid var to the id created",
+							"",
+							"tests[\"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"number\": 3,\r\n  \"current_boat\":\"The catmaran queen\",\r\n  \"arrival_date\": \"5/1/2017\",\r\n  \"departure_history\":[{\"departure_date\": \"\"}, {\"departed_boat\": \"\"}] \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - Return All Slips 2/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"globals.slipid = body.id; //set global boatid var to the id created",
+							"",
+							"tests[\"Test 1/3 Slip - Return All Slips  :  *Creating more instances of Slips before returning them all *   Status Code should equal '201 Created'. Actual Status Code = \" + statusCode] = statusCode === \"201 Created\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/slip",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"number\": 4,\r\n  \"current_boat\":\"gilligans island\",\r\n  \"arrival_date\": \"12/12/2017\",\r\n  \"departure_history\":[{\"departure_date\": \"\"}, {\"departed_boat\": \"\"}] \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Slip - Return All Slips 3/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"console.log(body);",
+							"",
+							"tests[\"Test 2/3 Slip - Return All Slips  : Status Code should equal '200 OK'. Actual Status Code = \" + statusCode] = statusCode === \"200 OK\";",
+							"",
+							"tests[\"Test 3/3 Slip - Return All Slips  : Body length should be at least >= 3 because of the slips we made. Actual Body length = \" + body.length] = body.length >= 3;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/allslips",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "BoatArrival - PUT 1/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"globals.boatid = body[0].id;",
+							"",
+							"tests[\"Test 1/2 BoatArrival - PUT : Get all the boats back and set the global boatid to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = \" + statusCode]  = statusCode === \"200 OK\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/allboats",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "BoatArrival - PUT 2/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"globals.slip_number = body[1].number;",
+							"",
+							"tests[\"Test 1/3 BoatArrival - PUT : Get all the slips back and set the global slip number to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = \" + statusCode]  = statusCode === \"200 OK\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/allslips",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "BoatArrival - PUT 3/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"if(responseBody === \"Error: 403 Forbidden. Slip is currently occupied.\") {",
+							"    body = 0;",
+							"}",
+							"",
+							"else ",
+							"    body = json.parse(responseBody);",
+							"",
+							"tests[\"Test 2/3 Slip - Return All Slips  : Status Code should equal '200 OK'. Actual Status Code = \" + statusCode] = statusCode === \"200 OK\";",
+							"",
+							"tests[\"Test 3/3 Slip - Return All Slips  : Body length should be at least >= 3 because of the slips we made. Actual Body length = \" + body.length] = body.length >= 3;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boatarrival/boat/{{boatid}}",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": {{slip_number}}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "BoatArrival - PATCH 1/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"globals.boatid = body[1].id;",
+							"",
+							"tests[\"Test 1/2 BoatArrival - PATCH : Get all the boats back and set the global boatid to the 2nd value passed in(1 position). Status code should equal '200 OK' if there are no errors :  Status Code = \" + statusCode]  = statusCode === \"200 OK\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/allboats",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "BoatArrival - PATCH 2/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"var body = JSON.parse(responseBody);",
+							"",
+							"console.log(body[1].number);",
+							"globals.slip_number = body[1].number;",
+							"",
+							"tests[\"Test 1/3 BoatArrival - PUT : Get all the slips back and set the global slip number to the 1st value passed in (0 position). Status code should equal '200 OK' if there are no errors :  Status Code = \" + statusCode]  = statusCode === \"200 OK\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/allslips",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "BoatArrival - PATCH 3/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode =  postman.getResponseHeader(\"Status\");",
+							"if(responseBody === \"Weird, something went wrong and PAGE NOT FOUND! Check URL.\") {",
+							"    body = 0;",
+							"}",
+							"",
+							"else ",
+							"    body = json.parse(responseBody);",
+							"",
+							"",
+							"tests[\"Test 2/2 BoatArrival - PATCH : This call should set the departure_history of the Slip. The departed_boat will be set to the id of the boatid being passed in. The id should equal the boat we just returned from the prior request. * Global Boat id *  \" + globals.boatid + \"     ===     * Returned JSON departed_boat *  \" + body.departed_boat]  = body.departed_boat === globals.boatid;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatsnslips.appspot.com/boatrrival/boat/{{boatid}}",
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 10\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
